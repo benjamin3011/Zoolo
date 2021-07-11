@@ -1,18 +1,17 @@
 import { configs } from "./configs.ts";
 import {
-  botId,
   cache,
   Collection,
   DiscordenoMessage,
   Manager,
   snowflakeToBigint,
   Track,
-  ws,
+  ws
 } from "./deps.ts";
 import {
   ButtonCollector,
   MessageCollector,
-  ReactionCollector,
+  ReactionCollector
 } from "./src/types/collectors.ts";
 import { Argument, Command, PermissionLevels } from "./src/types/commands.ts";
 import { CustomEvents } from "./src/types/events.ts";
@@ -53,6 +52,7 @@ export const bot = {
   tasks: new Collection<string, Task>(),
   runningTasks: { initialTimeouts: [] as number[], intervals: [] as number[] },
   memberLastActive: new Collection<bigint, number>(),
+  lastStudHorse: new Collection<bigint, number>(),
   musicQueues: new Collection<bigint, Track[]>(),
   loopingMusics: new Collection<bigint, boolean>(),
   lavadenoManager: new Manager(configs.nodes, {

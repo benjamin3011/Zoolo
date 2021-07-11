@@ -28,10 +28,10 @@ bot.tasks.set(`studlists`, {
         //get first horse from api, api is already sorted.
         const firstHorse = jsonData[0];
 
-        const price = parseInt(firstHorse.mating_price,10);
+        const price = parseInt(firstHorse.mating_price, 10);
 
         //price greater than 0.05ETH
-        if (parseInt(firstHorse.mating_price,10) > 50000000000000000) return;
+        if (parseInt(firstHorse.mating_price, 10) > 50000000000000000) return;
 
         const studHorse = firstHorse;
         //const studHorse = jsonData.find((horse: { mating_price: string; }) => horse.mating_price <= "160000000000000000");

@@ -11,3 +11,5 @@ scripts:
   dev:
     desc: Reloads the cache and then starts the bot.
     cmd: vr update && vr start
+watcher:
+  skip: ["fileloader/.ts"]

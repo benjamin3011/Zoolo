@@ -8,7 +8,7 @@ import { sendEmbed } from "../utils/helpers.ts";
 bot.tasks.set(`studlists`, {
   name: `studlists`,
   // Runs this function every 5 seconds
-  interval: Milliseconds.SECOND * 5,
+  interval: Milliseconds.SECOND * 50,
   execute: function () {
     // Only run when the bot is fully ready. In case guilds are still loading dont want to send wrong stats.
     if (!cache.isReady) return;
@@ -31,7 +31,7 @@ bot.tasks.set(`studlists`, {
         const price = parseInt(firstHorse.mating_price, 10);
 
         //price greater than 0.05ETH
-        if (parseInt(firstHorse.mating_price, 10) > 50000000000000000) return;
+        if (parseInt(firstHorse.mating_price, 10) > 150000000000000000) return;
 
         const studHorse = firstHorse;
         //const studHorse = jsonData.find((horse: { mating_price: string; }) => horse.mating_price <= "160000000000000000");

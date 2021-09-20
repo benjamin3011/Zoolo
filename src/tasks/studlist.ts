@@ -62,10 +62,11 @@ bot.tasks.set(`studlists`, {
 
         // If the channel is not found cancel out
         if (!configs.channelIDs.studDealsChannelID) return;
-        
+
         await sendMessage(configs.channelIDs.studDealsChannelID, "<@&863767339405410334>");
         //send embed in stud deal channel
         return await sendEmbed(configs.channelIDs.studDealsChannelID, embed);
-      }).catch((error) => console.log(error.message));
+      })
+      .catch((error) => console.log(error.message));
   },
 });

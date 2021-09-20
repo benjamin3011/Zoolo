@@ -1,19 +1,19 @@
+import { bot } from "../../cache.ts";
 import { botId, cache, DiscordActivityTypes, editBotStatus, upsertSlashCommands } from "../../deps.ts";
 import { Command } from "../types/commands.ts";
 import { Milliseconds } from "../utils/constants/time.ts";
 import { translate } from "../utils/i18next.ts";
+import { log } from "../utils/logger.ts";
 import { registerTasks } from "./../utils/task_helper.ts";
 import { sweepInactiveGuildsCache } from "./dispatch_requirements.ts";
-import { bot } from "../../cache.ts";
-import { log } from "../utils/logger.ts";
 
 bot.eventHandlers.ready = async function () {
   editBotStatus({
-    status: "dnd",
+    status: "online",
     activities: [
       {
-        name: "Discordeno Best Lib",
-        type: DiscordActivityTypes.Game,
+        name: "beobachtet Pferde",
+        type: DiscordActivityTypes.Custom,
         createdAt: Date.now(),
       },
     ],
